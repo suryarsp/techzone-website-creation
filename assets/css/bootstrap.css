@@ -1587,6 +1587,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top:-18px;
 }
 @media (min-width: 768px) {
   .container {
@@ -2082,6 +2083,7 @@ pre code {
   }
   .col-md-offset-3 {
     margin-left: 25%;
+    margin-top: -4%;
   }
   .col-md-offset-2 {
     margin-left: 16.66666667%;
