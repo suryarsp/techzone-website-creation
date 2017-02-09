@@ -11,7 +11,60 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/switchtext.css" >
+    <link rel="stylesheet" type="text/css" href="assets/css/soon.min.css" />
+
     <script type="text/javascript"  src="assets/scripts/particles.min.js"></script>
+    <script type="text/javascript"  src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/soon.min.js" data-auto="false"></script>
+
+
+    <style type="text/css">
+      @font-face {
+       font-family: csfont;
+       src: url("assets/fonts/techno_hideo_bold.eot"); /* EOT file for IE */
+      }
+      @font-face {
+       font-family:csfont;
+       src: url(assets/fonts/techno_hideo_bold.ttf); /* TTF file for CSS3 browsers */
+      }
+      @font-face {
+       font-family: csft;
+       src: url("assets/fonts/Inversionz.eot"); /* EOT file for IE */
+      }
+      @font-face {
+       font-family:csft;
+       src: url(assets/fonts/Inversionz.ttf); /* TTF file for CSS3 browsers */
+      }
+      #fonts{
+        position: absolute;
+        font-family:'csfont';
+        font-size: 130px;
+        color:#fff;
+        top: 25%;
+        left: 15%
+      }
+      #march{
+        position: absolute;
+        font-family: 'csft';
+        font-size: 130px;
+        color:#fff;
+        top: 40%;
+        left: 45%
+      }
+
+      #banner {
+        position: absolute;
+        top: 50%;
+        left: 25%
+
+      } 
+
+    </style>
+
+    
+
 
   </head>
   <body>
@@ -32,7 +85,82 @@
         <div class="section" id="section0">
           <div id="particles-js">
             <div class="nav-menu" onclick="openNav()">&#9776;</div>
+            
+
+              <div id="fonts" class="teqzone"></div>
+
+              <div id="march" class="march17"></div>
+
+              <div>
+
+                <section class="demo">
+
+                  <div class="content">
+
+                    <div class="live">
+
+                      <div class="auto-due">
+
+                        <style>
+                         
+                          #soon-glow {
+                            position: absolute;
+                            top: 80%;
+                            left: 60%;
+                            font-family: sans-serif;
+                            color:#fff;
+                            background-color: transparent;
+                            text-transform:lowercase;
+                          }
+                          #soon-glow .soon-label {
+                            color:#fff;
+                            text-shadow:0 0 .25rem rgba(255,255,255,.75);
+                          }
+                          #soon-glow .soon-ring-progress {
+                            color:#fff;
+                            background-color:rgba(255,255,255,.15);
+                          }
+                          #soon-glow>.soon-group {
+                            margin-bottom:-.5em;
+                          }
+                        </style>
+                        <div class="soon" id="soon-glow"
+                        data-layout="group overlap"
+                        data-face="slot doctor glow"
+                        data-padding="false"
+                        data-scale-max="l"
+                        data-visual="ring color-light width-thin glow-progress length-70 gap-0 offset-65">
+                      </div>
+
+                    </div>
+
+                    <script>
+
+                      (function(){
+
+                        var i=0,soons = document.querySelectorAll('.auto-due .soon'),l=soons.length;
+                        for (;i<l;i++) {
+                          soons[i].setAttribute('data-due','2017-03-18T10:10:00');
+                          soons[i].setAttribute('data-now','2017-02-09T00:00:00');
+                        }
+
+                      }());
+
+                    </script>
+
+                  </div>
+
+                </div>
+
+              </section>
+                
+              </div>
+
+              
+
+                  
           </div>
+
         </div>
 
         <div class="section " id="section1">
@@ -197,12 +325,12 @@
       </div>
 
 
-    <script type="text/javascript"  src="assets/scripts/jquery.min.js"></script>
     <script type="text/javascript"  src="assets/scripts/scripts.min.js"></script>
     <script type="text/javascript"  src="assets/scripts/bootstrap.min.js"></script>
     <script type="text/javascript"  src="assets/scripts/jquery.easing.min.js"></script>
     <script type="text/javascript"  src="assets/scripts/jquery.fullpage.min.js"></script>
     <script type="text/javascript"  src="assets/scripts/parallax.min.js"></script>
+    <script type="text/javascript"  src="assets/scripts/switchtext.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -252,7 +380,51 @@
 
       $('#scene1').parallax();
 
+
     </script>
+
+    <script>
+      $('.teqzone').switchText(['TeqZone 2K17'],
+                  1000,
+                  1,
+                  1,
+                  'glitch'
+                  ); 
+      $('.march17').switchText(['MARCH17'],
+                  2000,
+                  0,
+                  1,
+                  'zoomIn'
+                  );  
+    </script> 
+    </script>
+
+
+
+<script>
+  if ('addEventListener' in document) {
+    var showDemo = function(e){
+      var btn = e.target;
+      btn.style.display = 'none';
+      var wrapper = e.target.parentNode;
+      var panel = wrapper.querySelector('.el-sample');
+      panel.style.display = 'block';
+      var nodes = e.target.parentNode.querySelectorAll('.soon');
+      for(var i=0;i<nodes.length;i++){
+        Soon.create(nodes[i]);
+      }
+    };
+    var buttons = document.querySelectorAll('.demo-button');
+    for(var i=0;i<buttons.length;i++) {
+      buttons[i].addEventListener('click',showDemo);
+    }
+  }
+  var soons = document.querySelectorAll('.auto-due .soon');
+  for(var i=0;i<soons.length;i++) {
+    Soon.create(soons[i]);
+  }
+</script>
+
 
   </body>
 </html>
