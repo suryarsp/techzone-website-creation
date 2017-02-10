@@ -1587,8 +1587,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-top:-18px;
-}
+  padding-top: -12px;
+  }
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -1602,6 +1602,7 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+    margin:auto;
   }
 }
 
@@ -1931,7 +1932,8 @@ pre code {
   }
   .col-sm-offset-1 {
     margin-left: 8.33333333%;
-  }
+    margin-top: -3px;
+      }
   .col-sm-offset-0 {
     margin-left: 0;
   }
@@ -2083,7 +2085,7 @@ pre code {
   }
   .col-md-offset-3 {
     margin-left: 25%;
-    margin-top: -4%;
+  margin-top: -6.5%;
   }
   .col-md-offset-2 {
     margin-left: 16.66666667%;

@@ -109,8 +109,7 @@ body {
 /* Registration form starts */
 
       .well{
-        padding:3px !important;
-        padding-right: 3px;
+        padding: 15px !important;
       }
 
         #feedLabel {
@@ -279,8 +278,8 @@ body {
   text-align: start;
   color: #fff;
   position:all;
-  margin-left: 4px;
-  padding-top: 2px;
+  top: 50%;
+  left:4%;
 }
 
 .overlay {
@@ -391,12 +390,6 @@ body {
   }
   h1::after {
     height: 4px;
-  }
-  .text-center{
-
-    font-family: 'csfont';
-    font-style: italic;
-    font-size: 3px;
   }
 }
 
